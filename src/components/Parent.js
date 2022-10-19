@@ -1,4 +1,5 @@
 import React from "react";
+import {Child} from './Child';
 
 export class Parent extends React.Component {
   constructor(props) {
@@ -8,7 +9,10 @@ export class Parent extends React.Component {
     };
   };
 
+  //passing props 
   render() {
-    return <div></div>;
+    return (
+        <Child name={this.state.name} />
+    );
   }
 }
